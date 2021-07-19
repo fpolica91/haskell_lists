@@ -39,3 +39,6 @@ findInList _ [] =  error "empty list or number no in list"
 findInList number (x:xs)
   | number == x = x
   | otherwise =  findInList number xs                             
+
+intLength [] = 0
+intLength(x:xs) =  1 + intLength(xs)
