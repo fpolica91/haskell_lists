@@ -37,3 +37,9 @@ fastReverse xs = fastReverseAcc [] xs
 fastReverseUsingWhere xs = fastReverseAcc [] xs
     where fastReverseAcc acc []       = acc
           fastReverseAcc acc (x : xs) = fastReverseAcc (x:acc) xs
+
+
+selectEverySecondItem [] = []
+selectEverySecondItem [x] = []
+--run selectEverySecondItem "ahuebltlzopo?!   wionrhlsd"
+selectEverySecondItem (x:y:xs) = y:selectEverySecondItem(xs)
